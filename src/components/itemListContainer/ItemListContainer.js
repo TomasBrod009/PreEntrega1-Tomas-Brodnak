@@ -1,9 +1,9 @@
 import React from 'react'
-import {useEffect, useState } from 'react'
+import "../styles/ItemListContainer.css"
+import Card from '../Card/Card'
 
 
 function itemListContainer() {
-
 
 
 
@@ -12,7 +12,7 @@ function itemListContainer() {
       "price":"9,99",
       "platform":"Gameboy",
       "date":"05-10-1999",
-      "img":"",
+      "img":"./src/imgs/pokeAzul.webp",
       "quantity":1,
       "id":1},
   
@@ -172,12 +172,30 @@ function itemListContainer() {
       "price":"29,99",
       "date":"15-11-2019",
       "platform":"Nintendo Switch",
-      "img":"./imgs/pokeEscudo.webp",
+      "img":"",
       "quantity":1,
       "id":21}
     ]
+
   return (
-    <h1>wesa</h1>
+    <div className="container mx-auto px-4">
+      <div className="row-auto">
+
+      {cards.map(({name, date, id, platform, quantity, price, img},index) =>
+
+        <Card
+        key={index}
+        title={name}
+        date={date}
+        img={img}
+        id={id}
+        platform={platform}
+        price = {price}
+        quantity = {quantity}
+        />) }
+        
+      </div>
+    </div>
   )
 }
 

@@ -1,6 +1,7 @@
 import NavBar from './components/navbar/NavBar';
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import Sidebar from './components/Sidebar/Sidebar';
+import Card from './components/Card/Card';
 import './App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 <div className='App'>
     <NavBar/>
     <Sidebar/>
-    <ItemListContainer greeting='Cliente'/>
+    <ItemListContainer/>
 </div>
   );
 }
